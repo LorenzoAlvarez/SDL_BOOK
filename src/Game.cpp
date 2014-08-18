@@ -7,8 +7,7 @@
 
 #include "../include/Game.hpp"
 
-Game::Game() {
-    
+Game::Game() { 
 }
 
 Game::Game(const Game& orig) {
@@ -38,7 +37,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
             if(m_pRenderer != nullptr) //renderer init success
             {
                 std::cout << "renderer creation success\n";
-                SDL_SetRenderDrawColor(m_pRenderer.get(), 255, 255, 255, 255);
+                SDL_SetRenderDrawColor(m_pRenderer.get(), 0,0, 0, 255);
             }
             
             else
@@ -61,13 +60,19 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
     
     std::cout << "init success\n";
     m_bRunning = true; //everything inited successfully
+    //add texture to texture manager.
+    if(!TheTextureManager::Istance()->load("media/images/animate-alpha.png",
+            "animate", m_pRenderer.get()))
+    
+    //m_textureManager.load("media/images/animate-alpha.png",
+    //        "animate", m_pRenderer.get());
     
     return true;
 }
 
 void Game::update()
 {
-    
+    m_currentFrame = int((SDL_GetTicks() / 100 % 6));
 }
 
 void Game::handleEvents()
@@ -89,6 +94,12 @@ void Game::handleEvents()
 void Game::render()
 {
     SDL_RenderClear(m_pRenderer.get());
+    
+    TheTextureManager::Istance()->draw("animate", 0, 0, 128, 82, m_pRenderer.get());
+    
+    TheTextureManager::Istance()->drawFrame("animate", 200, 200, 128, 82, 1, m_currentFrame,
+            m_pRenderer.get());
+    
     SDL_RenderPresent(m_pRenderer.get());
 }
 

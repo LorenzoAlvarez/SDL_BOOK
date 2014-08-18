@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>include/Game.hpp</itemPath>
       <itemPath>include/SDL_ptr.hpp</itemPath>
+      <itemPath>include/TextureManager.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -15,6 +16,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/Game.cpp</itemPath>
+      <itemPath>src/TextureManager.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -56,9 +58,13 @@
       </item>
       <item path="include/SDL_ptr.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/TextureManager.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TextureManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -85,9 +91,13 @@
       </item>
       <item path="include/SDL_ptr.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/TextureManager.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TextureManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

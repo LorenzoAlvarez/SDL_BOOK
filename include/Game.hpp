@@ -10,6 +10,7 @@
 
 #include "SDL_ptr.hpp"
 #include <iostream>
+#include "TextureManager.hpp"
 
 class Game {
 public:
@@ -32,6 +33,8 @@ private:
     
     bool          m_bRunning;
     
+    //variables del textureManager
+    int m_currentFrame;
     
 };
 

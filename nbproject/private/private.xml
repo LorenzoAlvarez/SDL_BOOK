@@ -9,6 +9,8 @@
         <group>
             <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/SDL_ptr.hpp</file>
             <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/main.cpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/src/TextureManager.cpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/TextureManager.hpp</file>
             <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/src/Game.cpp</file>
             <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/Game.hpp</file>
         </group>
