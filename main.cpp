@@ -11,20 +11,30 @@ using namespace std;
 
 int main(int argc, char** argv) {
     
-    Game* g_game = new Game();
     
-    //inicializar SDL
-    g_game->init("Chapter1",100,100,640,480,0);
+    std::cout << "game init attempt..." << endl;
     
-    //bucle
-    while(g_game->isRunning())
+    if(TheGame::Istance()->init("Chapter 1", 100, 100, 640, 480, false))
     {
-        g_game->handleEvents();
-        g_game->update();
-        g_game->render();
+        std::cout << "game init success!" << endl;
+        
+        while(TheGame::Istance()->isRunning())
+        {
+            TheGame::Istance()->handleEvents();
+            TheGame::Istance()->update();
+            TheGame::Istance()->render();
+            
+            SDL_Delay(10);
+        }
+    }
+    else
+    {
+        std::cout << "game init failure - " << SDL_GetError() << endl;
+        return -1;
     }
     
-    g_game->clean();
+    std::cout << "game closing..." << endl;
+    TheGame::Istance()->clean();
     
     return 0;
 }

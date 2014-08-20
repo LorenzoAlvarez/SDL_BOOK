@@ -4,7 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>include/Enemy.hpp</itemPath>
       <itemPath>include/Game.hpp</itemPath>
+      <itemPath>include/GameObject.hpp</itemPath>
+      <itemPath>include/LoaderParams.hpp</itemPath>
+      <itemPath>include/Player.hpp</itemPath>
+      <itemPath>include/SDLGameObject.hpp</itemPath>
       <itemPath>include/SDL_ptr.hpp</itemPath>
       <itemPath>include/TextureManager.hpp</itemPath>
     </logicalFolder>
@@ -15,7 +20,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>src/Enemy.cpp</itemPath>
       <itemPath>src/Game.cpp</itemPath>
+      <itemPath>src/GameObject.cpp</itemPath>
+      <itemPath>src/LoaderParams.cpp</itemPath>
+      <itemPath>src/Player.cpp</itemPath>
+      <itemPath>src/SDLGameObject.cpp</itemPath>
       <itemPath>src/TextureManager.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -54,7 +64,17 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="include/Enemy.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/Game.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/GameObject.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/Player.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/SDLGameObject.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/SDL_ptr.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -62,7 +82,17 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/Enemy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/SDLGameObject.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/TextureManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -87,7 +117,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="include/Enemy.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/Game.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/GameObject.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/Player.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/SDLGameObject.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/SDL_ptr.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -95,7 +135,17 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/Enemy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/SDLGameObject.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/TextureManager.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -36,7 +36,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/src/Enemy.o \
 	${OBJECTDIR}/src/Game.o \
+	${OBJECTDIR}/src/GameObject.o \
+	${OBJECTDIR}/src/LoaderParams.o \
+	${OBJECTDIR}/src/Player.o \
+	${OBJECTDIR}/src/SDLGameObject.o \
 	${OBJECTDIR}/src/TextureManager.o
 
 
@@ -69,10 +74,35 @@ ${OBJECTDIR}/main.o: main.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
+${OBJECTDIR}/src/Enemy.o: src/Enemy.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Enemy.o src/Enemy.cpp
+
 ${OBJECTDIR}/src/Game.o: src/Game.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Game.o src/Game.cpp
+
+${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
+
+${OBJECTDIR}/src/LoaderParams.o: src/LoaderParams.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/LoaderParams.o src/LoaderParams.cpp
+
+${OBJECTDIR}/src/Player.o: src/Player.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Player.o src/Player.cpp
+
+${OBJECTDIR}/src/SDLGameObject.o: src/SDLGameObject.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude `pkg-config --cflags sdl2` `pkg-config --cflags SDL2_image` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SDLGameObject.o src/SDLGameObject.cpp
 
 ${OBJECTDIR}/src/TextureManager.o: src/TextureManager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

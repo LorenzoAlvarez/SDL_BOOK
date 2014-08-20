@@ -6,15 +6,16 @@
  */
 
 #include "../include/Game.hpp"
+#include "GameObject.hpp"
+#include "Player.hpp"
+#include "Enemy.hpp"
+
+std::unique_ptr<Game>  Game::s_pIstance = 0;
 
 Game::Game() { 
 }
 
-Game::Game(const Game& orig) {
-}
 
-Game::~Game() {
-}
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
@@ -60,19 +61,27 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
     
     std::cout << "init success\n";
     m_bRunning = true; //everything inited successfully
-    //add texture to texture manager.
-    if(!TheTextureManager::Istance()->load("media/images/animate-alpha.png",
-            "animate", m_pRenderer.get()))
     
-    //m_textureManager.load("media/images/animate-alpha.png",
-    //        "animate", m_pRenderer.get());
+    TextureManager::Istance()->load("media/images/animate-alpha.png","animate",m_pRenderer.get());
+    
+    
+    std::unique_ptr<GameObject> player(new Player(new LoaderParams(100,100,128,82,"animate")));
+    m_gameObjects.push_back(std::move(player));
+    
+    std::unique_ptr<GameObject> enemy(new Enemy(new LoaderParams(200,200,128,82,"animate")));
+    m_gameObjects.push_back(std::move(enemy));
     
     return true;
 }
 
 void Game::update()
 {
-    m_currentFrame = int((SDL_GetTicks() / 100 % 6));
+    for(auto i = m_gameObjects.begin(); i != m_gameObjects.end(); ++i)
+    {
+        i->get()->update();
+    }
+    //m_go.update();
+    //m_player.update();
 }
 
 void Game::handleEvents()
@@ -95,10 +104,10 @@ void Game::render()
 {
     SDL_RenderClear(m_pRenderer.get());
     
-    TheTextureManager::Istance()->draw("animate", 0, 0, 128, 82, m_pRenderer.get());
-    
-    TheTextureManager::Istance()->drawFrame("animate", 200, 200, 128, 82, 1, m_currentFrame,
-            m_pRenderer.get());
+    for(auto i = m_gameObjects.begin(); i != m_gameObjects.end(); ++i)
+    {
+        i->get()->draw();
+    }
     
     SDL_RenderPresent(m_pRenderer.get());
 }
