@@ -42,7 +42,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/LoaderParams.o \
 	${OBJECTDIR}/src/Player.o \
 	${OBJECTDIR}/src/SDLGameObject.o \
-	${OBJECTDIR}/src/TextureManager.o
+	${OBJECTDIR}/src/TextureManager.o \
+	${OBJECTDIR}/src/Vector2D.o
 
 
 # C Compiler Flags
@@ -108,6 +109,11 @@ ${OBJECTDIR}/src/TextureManager.o: src/TextureManager.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TextureManager.o src/TextureManager.cpp
+
+${OBJECTDIR}/src/Vector2D.o: src/Vector2D.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Vector2D.o src/Vector2D.cpp
 
 # Subprojects
 .build-subprojects:
