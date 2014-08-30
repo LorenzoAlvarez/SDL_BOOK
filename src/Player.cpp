@@ -19,9 +19,12 @@ void Player::draw()
 
 void Player::update()
 {
-    m_currentFrame = int (((SDL_GetTicks() / 100) % 6));
+    m_velocity.setX(0);
+    m_velocity.setY(0);
     
-    m_acceleration.setX(1);
+    handleInput();
+    
+    m_currentFrame = int(((SDL_GetTicks() / 100) % 6 ));
     
     SDLGameObject::update();
 }
@@ -29,4 +32,35 @@ void Player::update()
 void Player::clean()
 {
     
+}
+
+
+void Player::handleInput()
+{
+    if (TheInputHandler::Istance()->joysticksInitialised())
+    {
+        if(TheInputHandler::Istance()->xvalue(0,1) > 0 ||
+           TheInputHandler::Istance()->xvalue(0,1) < 0)
+        {
+            m_velocity.setX(1 * TheInputHandler::Istance()->xvalue(0,1));
+        }
+        
+        if(TheInputHandler::Istance()->yvalue(0, 1) > 0 ||
+           TheInputHandler::Istance()->yvalue(0, 1) < 0)
+        {
+            m_velocity.setY(1 * TheInputHandler::Istance()->yvalue(0, 1));
+        }
+        
+        if(TheInputHandler::Istance()->xvalue(0, 2) > 0 ||
+           TheInputHandler::Istance()->xvalue(0, 2) < 0)
+        {
+            m_velocity.setX(1 * TheInputHandler::Istance()->xvalue(0, 2));
+        }
+        
+        if(TheInputHandler::Istance()->yvalue(0, 2) > 0 ||
+           TheInputHandler::Istance()->yvalue(0, 2) < 0)
+        {
+            m_velocity.setY(1 * TheInputHandler::Istance() ->yvalue(0, 2));
+        }
+    }
 }

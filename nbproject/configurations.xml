@@ -7,6 +7,7 @@
       <itemPath>include/Enemy.hpp</itemPath>
       <itemPath>include/Game.hpp</itemPath>
       <itemPath>include/GameObject.hpp</itemPath>
+      <itemPath>include/InputHandler.hpp</itemPath>
       <itemPath>include/LoaderParams.hpp</itemPath>
       <itemPath>include/Player.hpp</itemPath>
       <itemPath>include/SDLGameObject.hpp</itemPath>
@@ -24,6 +25,7 @@
       <itemPath>src/Enemy.cpp</itemPath>
       <itemPath>src/Game.cpp</itemPath>
       <itemPath>src/GameObject.cpp</itemPath>
+      <itemPath>src/InputHandler.cpp</itemPath>
       <itemPath>src/LoaderParams.cpp</itemPath>
       <itemPath>src/Player.cpp</itemPath>
       <itemPath>src/SDLGameObject.cpp</itemPath>
@@ -72,6 +74,8 @@
       </item>
       <item path="include/GameObject.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/InputHandler.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/Player.hpp" ex="false" tool="3" flavor2="0">
@@ -91,6 +95,8 @@
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/InputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -129,6 +135,8 @@
       </item>
       <item path="include/GameObject.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/InputHandler.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/Player.hpp" ex="false" tool="3" flavor2="0">
@@ -148,6 +156,8 @@
       <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/InputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
       </item>

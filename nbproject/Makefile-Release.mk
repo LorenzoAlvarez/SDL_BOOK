@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Enemy.o \
 	${OBJECTDIR}/src/Game.o \
 	${OBJECTDIR}/src/GameObject.o \
+	${OBJECTDIR}/src/InputHandler.o \
 	${OBJECTDIR}/src/LoaderParams.o \
 	${OBJECTDIR}/src/Player.o \
 	${OBJECTDIR}/src/SDLGameObject.o \
@@ -89,6 +90,11 @@ ${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
+
+${OBJECTDIR}/src/InputHandler.o: src/InputHandler.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/InputHandler.o src/InputHandler.cpp
 
 ${OBJECTDIR}/src/LoaderParams.o: src/LoaderParams.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

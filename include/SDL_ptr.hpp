@@ -36,5 +36,8 @@ typedef std::unique_ptr<SDL_Surface, SurfaceDeleter> SurfacePtr;
 typedef FunDelete<SDL_Texture, SDL_DestroyTexture> TextureDeleter;
 typedef std::unique_ptr<SDL_Texture, TextureDeleter> TexturePtr;
 
+typedef FunDelete<SDL_Joystick, SDL_JoystickClose> JoystickDeleter;
+typedef std::unique_ptr<SDL_Joystick, JoystickDeleter> JoystickPtr;
+
 #endif	/* SDL_PTR_HPP */
 

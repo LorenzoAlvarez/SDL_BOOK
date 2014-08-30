@@ -14,6 +14,8 @@
 #include "TextureManager.hpp"
 #include "GameObject.hpp"
 #include "Player.hpp"
+#include "Enemy.hpp"
+#include "InputHandler.hpp"
 
 
 class Game {

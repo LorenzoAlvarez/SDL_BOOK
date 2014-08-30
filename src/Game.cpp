@@ -6,13 +6,13 @@
  */
 
 #include "../include/Game.hpp"
-#include "GameObject.hpp"
-#include "Player.hpp"
-#include "Enemy.hpp"
+
 
 std::unique_ptr<Game>  Game::s_pIstance = 0;
 
-Game::Game() { 
+Game::Game()
+{
+    
 }
 
 
@@ -62,6 +62,8 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
     std::cout << "init success\n";
     m_bRunning = true; //everything inited successfully
     
+    TheInputHandler::Istance()->initialiseJoysticks();
+    
     TextureManager::Istance()->load("media/images/animate-alpha.png","animate",m_pRenderer.get());
     
     
@@ -86,6 +88,7 @@ void Game::update()
 
 void Game::handleEvents()
 {
+    /*    
     SDL_Event event;
     if(SDL_PollEvent(&event))
     {
@@ -98,6 +101,8 @@ void Game::handleEvents()
                 break;
         }
     }
+    */
+    TheInputHandler::Istance()->update();
 }
 
 void Game::render()
@@ -115,7 +120,10 @@ void Game::render()
 void Game::clean()
 {
     std::cout << "cleaning game\n";
+    TheInputHandler::Istance()->clean();
     m_pWindow.release();
     m_pRenderer.release();
     SDL_Quit;
+    m_bRunning = false;
 }
+

@@ -7,6 +7,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/SDL_ptr.hpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/main.cpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/src/TextureManager.cpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/TextureManager.hpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/Game.hpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/src/Game.cpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/InputHandler.hpp</file>
+            <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/src/InputHandler.cpp</file>
             <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/src/Vector2D.cpp</file>
             <file>file:/home/zito/NetBeansProjects/SDL_GameCPP11/include/Vector2D.hpp</file>
         </group>

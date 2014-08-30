@@ -9,6 +9,7 @@
 #define	PLAYER_HPP
 
 #include "SDLGameObject.hpp"
+#include "InputHandler.hpp"
 
 class Player : public SDLGameObject 
 {  //inherit form GameObject
@@ -20,6 +21,8 @@ public:
     virtual void draw();
     virtual void update();
     virtual void clean();
+private:
+    void handleInput();
 };
 
 #endif	/* PLAYER_HPP */
