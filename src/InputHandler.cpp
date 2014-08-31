@@ -29,6 +29,10 @@ void InputHandler::initialiseJoysticks()
             
             if ( joy.get() != nullptr )
             {
+
+                SDL_Delay(1000);
+                std::cout<< "---- pad " << i << " ----" << std::endl; 
+                
                 m_joysticks.push_back(std::move(joy));
                 
                 std::unique_ptr<Vector2D> stick1(new Vector2D((float)0, (float) 0));
@@ -37,8 +41,25 @@ void InputHandler::initialiseJoysticks()
                 m_joystickValues.push_back(std::make_pair(
                         std::move(stick1),std::move(stick2)));
                 
+                std::vector<bool> tempButtons;
+                
+                
+                //SDL_not open until I push the button
+                /*
+                std::cout<< SDL_GetError();
+                for (int j = 0; j < SDL_JoystickNumButtons(joy.get()); j++)
+                {
+                    tempButtons.push_back(false);
+                }
+                */
+                
+                //port 1 on linux of xbox360 controller
+                for (int nButtons = 0; nButtons < 17; nButtons++ )
+                    tempButtons.push_back(false);
+                
+                m_buttonStates.push_back(tempButtons);
+                    
             }
-            
             else
             {
                 std::cout << SDL_GetError();
@@ -78,8 +99,8 @@ void InputHandler::update()
         if (event.type == SDL_JOYAXISMOTION)
         {
             int whichOne = event.jaxis.which;
-            //left stick move left or right
             
+            //left stick move left or right
             if (event.jaxis.axis == 0)
             {
                 if (event.jaxis.value > m_joystickDeadZone)
@@ -149,7 +170,21 @@ void InputHandler::update()
                     m_joystickValues[whichOne].second->setY(0);
                 }
             }
+          
         }
+        
+        //buttons
+        if (event.type == SDL_JOYBUTTONDOWN)
+        {
+            int whichOne = event.jaxis.which;
+            m_buttonStates[whichOne] [event.jbutton.button] = true;
+        }
+        if (event.type == SDL_JOYBUTTONUP)
+        {
+            int whichOne = event.jaxis.which;
+            m_buttonStates[whichOne][event.jbutton.button] = false;
+        }
+
     }
 }
 

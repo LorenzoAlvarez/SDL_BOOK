@@ -62,5 +62,11 @@ void Player::handleInput()
         {
             m_velocity.setY(1 * TheInputHandler::Istance() ->yvalue(0, 2));
         }
+        
+        if(TheInputHandler::Istance()->getButtonState(0, 3))
+        {
+            m_velocity.setX(1);
+        }
+        
     }
 }

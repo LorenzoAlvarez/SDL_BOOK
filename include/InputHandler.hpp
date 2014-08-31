@@ -30,7 +30,12 @@ public:
     void update();
     void clean();
     
-    ~InputHandler() {}
+    ~InputHandler() 
+    {
+        m_joystickValues.clear();
+        m_joysticks.clear();
+        m_buttonStates.clear();
+    }
     
     void initialiseJoysticks();
     bool joysticksInitialised() { return m_bJoysticksInitialised; }
@@ -38,6 +43,10 @@ public:
     int xvalue (int joy, int stick);
     int yvalue (int joy, int stick);
     
+    bool getButtonState(int joy, int buttonNumber)
+    {
+        return m_buttonStates[joy][buttonNumber];
+    }
 private:
     
     std::vector<JoystickPtr> m_joysticks;
@@ -45,6 +54,8 @@ private:
     InputHandler();
     
     
+    
+    std::vector<std::vector<bool> > m_buttonStates;
     std::vector<std::pair<std::unique_ptr<Vector2D>, std::unique_ptr<Vector2D> > > m_joystickValues;
     const int m_joystickDeadZone = 10000;
     
