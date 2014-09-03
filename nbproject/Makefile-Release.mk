@@ -39,8 +39,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Enemy.o \
 	${OBJECTDIR}/src/Game.o \
 	${OBJECTDIR}/src/GameObject.o \
+	${OBJECTDIR}/src/GameState.o \
+	${OBJECTDIR}/src/GameStateMachine.o \
 	${OBJECTDIR}/src/InputHandler.o \
 	${OBJECTDIR}/src/LoaderParams.o \
+	${OBJECTDIR}/src/MenuState.o \
+	${OBJECTDIR}/src/PlayState.o \
 	${OBJECTDIR}/src/Player.o \
 	${OBJECTDIR}/src/SDLGameObject.o \
 	${OBJECTDIR}/src/TextureManager.o \
@@ -91,6 +95,16 @@ ${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
 
+${OBJECTDIR}/src/GameState.o: src/GameState.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameState.o src/GameState.cpp
+
+${OBJECTDIR}/src/GameStateMachine.o: src/GameStateMachine.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GameStateMachine.o src/GameStateMachine.cpp
+
 ${OBJECTDIR}/src/InputHandler.o: src/InputHandler.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
@@ -100,6 +114,16 @@ ${OBJECTDIR}/src/LoaderParams.o: src/LoaderParams.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/LoaderParams.o src/LoaderParams.cpp
+
+${OBJECTDIR}/src/MenuState.o: src/MenuState.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MenuState.o src/MenuState.cpp
+
+${OBJECTDIR}/src/PlayState.o: src/PlayState.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/PlayState.o src/PlayState.cpp
 
 ${OBJECTDIR}/src/Player.o: src/Player.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

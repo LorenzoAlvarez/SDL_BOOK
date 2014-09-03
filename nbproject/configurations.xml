@@ -7,8 +7,12 @@
       <itemPath>include/Enemy.hpp</itemPath>
       <itemPath>include/Game.hpp</itemPath>
       <itemPath>include/GameObject.hpp</itemPath>
+      <itemPath>include/GameState.hpp</itemPath>
+      <itemPath>include/GameStateMachine.hpp</itemPath>
       <itemPath>include/InputHandler.hpp</itemPath>
       <itemPath>include/LoaderParams.hpp</itemPath>
+      <itemPath>include/MenuState.hpp</itemPath>
+      <itemPath>include/PlayState.hpp</itemPath>
       <itemPath>include/Player.hpp</itemPath>
       <itemPath>include/SDLGameObject.hpp</itemPath>
       <itemPath>include/SDL_ptr.hpp</itemPath>
@@ -25,8 +29,12 @@
       <itemPath>src/Enemy.cpp</itemPath>
       <itemPath>src/Game.cpp</itemPath>
       <itemPath>src/GameObject.cpp</itemPath>
+      <itemPath>src/GameState.cpp</itemPath>
+      <itemPath>src/GameStateMachine.cpp</itemPath>
       <itemPath>src/InputHandler.cpp</itemPath>
       <itemPath>src/LoaderParams.cpp</itemPath>
+      <itemPath>src/MenuState.cpp</itemPath>
+      <itemPath>src/PlayState.cpp</itemPath>
       <itemPath>src/Player.cpp</itemPath>
       <itemPath>src/SDLGameObject.cpp</itemPath>
       <itemPath>src/TextureManager.cpp</itemPath>
@@ -74,9 +82,17 @@
       </item>
       <item path="include/GameObject.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/GameState.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/GameStateMachine.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/InputHandler.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MenuState.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/PlayState.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/Player.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -96,9 +112,17 @@
       </item>
       <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/GameState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameStateMachine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/InputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MenuState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/PlayState.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -135,9 +159,17 @@
       </item>
       <item path="include/GameObject.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/GameState.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/GameStateMachine.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/InputHandler.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/MenuState.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/PlayState.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/Player.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -157,9 +189,17 @@
       </item>
       <item path="src/GameObject.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="src/GameState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameStateMachine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/InputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MenuState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/PlayState.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>

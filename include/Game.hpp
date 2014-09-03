@@ -16,6 +16,7 @@
 #include "Player.hpp"
 #include "Enemy.hpp"
 #include "InputHandler.hpp"
+#include "GameStateMachine.hpp"
 
 
 class Game {
@@ -43,6 +44,7 @@ public:
     
     SDL_Renderer* getRenderer() {return m_pRenderer.get();} 
     
+    
 private:
     
     WindowPtr     m_pWindow;
@@ -56,6 +58,8 @@ private:
     
     //variables del textureManager
     int m_currentFrame;
+    
+    std::unique_ptr<GameStateMachine> m_pGameStateMachine;
     
 };
 

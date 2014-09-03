@@ -29,9 +29,6 @@ void InputHandler::initialiseJoysticks()
             
             if ( joy.get() != nullptr )
             {
-
-                SDL_Delay(1000);
-                std::cout<< "---- pad " << i << " ----" << std::endl; 
                 
                 m_joysticks.push_back(std::move(joy));
                 
