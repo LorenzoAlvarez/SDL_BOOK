@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/GameStateMachine.o \
 	${OBJECTDIR}/src/InputHandler.o \
 	${OBJECTDIR}/src/LoaderParams.o \
+	${OBJECTDIR}/src/MenuButton.o \
 	${OBJECTDIR}/src/MenuState.o \
 	${OBJECTDIR}/src/PlayState.o \
 	${OBJECTDIR}/src/Player.o \
@@ -114,6 +115,11 @@ ${OBJECTDIR}/src/LoaderParams.o: src/LoaderParams.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/LoaderParams.o src/LoaderParams.cpp
+
+${OBJECTDIR}/src/MenuButton.o: src/MenuButton.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MenuButton.o src/MenuButton.cpp
 
 ${OBJECTDIR}/src/MenuState.o: src/MenuState.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

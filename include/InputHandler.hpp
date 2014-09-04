@@ -14,6 +14,13 @@
 #include "SDL_ptr.hpp"
 #include "Game.hpp"
 
+enum mouse_buttons
+{
+    LEFT    = 0,
+    MIDDLE  = 1,
+    RIGHT   = 2
+};
+
 class InputHandler {
 public:
     
@@ -47,8 +54,20 @@ public:
     {
         return m_buttonStates[joy][buttonNumber];
     }
+    
+    bool getMouseButtonState(int buttonNumber)
+    {
+        return m_mouseButtonStates[buttonNumber];
+    }
+    
+    Vector2D* getMousePosition()
+    {
+        return m_mousePosition.get();
+    }
 private:
     
+    
+    //JOYSTICK
     std::vector<JoystickPtr> m_joysticks;
     bool m_bJoysticksInitialised;
     InputHandler();
@@ -58,6 +77,12 @@ private:
     std::vector<std::vector<bool> > m_buttonStates;
     std::vector<std::pair<std::unique_ptr<Vector2D>, std::unique_ptr<Vector2D> > > m_joystickValues;
     const int m_joystickDeadZone = 10000;
+    
+    
+    //MOUSE
+    std::vector<bool>           m_mouseButtonStates;
+    std::unique_ptr<Vector2D>   m_mousePosition;
+    
     
     
     static std::unique_ptr<InputHandler> s_pIstance;

@@ -17,8 +17,6 @@ Game::Game()
     
 }
 
-
-
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
     //attempt to initialize SDL
@@ -119,6 +117,13 @@ void Game::handleEvents()
     if(TheInputHandler::Istance()->getButtonState(0,1))
     {
         m_pGameStateMachine->changeState(new PlayState);
+    }
+    
+    if(TheInputHandler::Istance()->getMouseButtonState(0) )
+    {
+        m_pGameStateMachine->changeState(new PlayState);
+        std::cout << TheInputHandler::Istance()->getMousePosition()->getX() << ", " 
+                  << TheInputHandler::Istance()->getMousePosition()->getY() << std::endl;
     }
 }
 

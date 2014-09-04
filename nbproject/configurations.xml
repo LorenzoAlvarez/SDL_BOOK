@@ -11,6 +11,7 @@
       <itemPath>include/GameStateMachine.hpp</itemPath>
       <itemPath>include/InputHandler.hpp</itemPath>
       <itemPath>include/LoaderParams.hpp</itemPath>
+      <itemPath>include/MenuButton.hpp</itemPath>
       <itemPath>include/MenuState.hpp</itemPath>
       <itemPath>include/PlayState.hpp</itemPath>
       <itemPath>include/Player.hpp</itemPath>
@@ -33,6 +34,7 @@
       <itemPath>src/GameStateMachine.cpp</itemPath>
       <itemPath>src/InputHandler.cpp</itemPath>
       <itemPath>src/LoaderParams.cpp</itemPath>
+      <itemPath>src/MenuButton.cpp</itemPath>
       <itemPath>src/MenuState.cpp</itemPath>
       <itemPath>src/PlayState.cpp</itemPath>
       <itemPath>src/Player.cpp</itemPath>
@@ -90,6 +92,8 @@
       </item>
       <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/MenuButton.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/MenuState.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/PlayState.hpp" ex="false" tool="3" flavor2="0">
@@ -119,6 +123,8 @@
       <item path="src/InputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MenuButton.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/MenuState.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -167,6 +173,8 @@
       </item>
       <item path="include/LoaderParams.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/MenuButton.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/MenuState.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/PlayState.hpp" ex="false" tool="3" flavor2="0">
@@ -196,6 +204,8 @@
       <item path="src/InputHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/LoaderParams.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MenuButton.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/MenuState.cpp" ex="false" tool="1" flavor2="0">
       </item>
